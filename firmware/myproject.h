@@ -26,27 +26,10 @@
 
 #include "parameters.h"
 
-/*
-// Prototype of top level function for C-synthesis
-void myproject(
-	       hls::stream<input_t>   em_barrel[N_INPUT_3_1],
-	       //hls::stream<result_t>  layer54_out[N_FILT_18],
-	       hls::stream<result_t>  layer54_out[N_LAYER_52],
-	       model_weightdefault_t w27[73728],
-	       model_weightdefault_t w31[147456],
-	       model_weightdefault_t w36[294912],
-	       model_weightdefault_t w40[589824],
-	       model_weightdefault_t w44[589824],
-	       model_weightdefault_t w48[65536]
-	       );
-*/
-
-// number_parameters = out_channels * (in_channels * kernel_h * kernel_w+1)
-//number_parameters = N_FILT_40*(N_FILT_40*OUT_HEIGHT_40*OUT_WIDTH_40+1)
 
 void myproject(
 	       hls::stream<input_t>    em_barrel[257],
-	       hls::stream<result_t>  layer54_out[256],	       
+	       hls::stream<result_t>  layer54_out[257],	       
 	       model_weightdefault_t w40[589824]
 	       
 	       );
